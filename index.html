@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="Marianna.jpg" sizes="500x500" type="image/jpg">
+ 
+  <title>Application Multiservices</title>
+</head>
+<body>
+
+
+
+      <!-- Menu de navigation -->
+      <nav>
+        <ul>
+            <li><a href="#" class="nav-link" data-modal="principale">Principale</a></li>
+            <li><a href="#" class="nav-link" data-modal="services">Services</a></li>
+            <li><a href="#" class="nav-link" data-modal="contact">Contact</a></li>
+            <li><a href="#" class="nav-link" data-modal="apropos">À propos de nous</a></li>
+        </ul>
+    </nav>
+
+    <!-- Fenêtres flottantes -->
+    <!-- Principale -->
+    <div id="principale" class="modal">
+        <div class="modal-content">
+            <span class="close" data-close="principale">&times;</span>
+            <h1>Principale</h1>
+            <ul>
+                <li>Services</li>
+                <li>Éditeur intégré</li>
+                <li>Recherche instantanée</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div id="services" class="modal">
+        <div class="modal-content">
+            <span class="close" data-close="services">&times;</span>
+            <h1>Nos Services</h1>
+            <ul>
+                <li>Design</li>
+                <li>Développement Web</li>
+                <li>Intégration</li>
+                <li>Formation</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="modal">
+        <div class="modal-content">
+            <span class="close" data-close="contact">&times;</span>
+            <h1>Contact</h1>
+            <p><strong>Téléphone :</strong> +792510102354</p>
+            <p><strong>Email :</strong> bah@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- À propos de nous -->
+    <div id="apropos" class="modal">
+        <div class="modal-content">
+            <span class="close" data-close="apropos">&times;</span>
+            <h1>À propos de nous</h1>
+            <p>Nous sommes une entreprise de technologie basée sur le développement mobile et des modèles d'intelligences artificielles.</p>
+            <p>Nous développons aussi les réseaux de technologies mobiles.</p>
+            <p><strong>Adresse :</strong> Moscou, métro Dimix, bâtiment 55</p>
+        </div>
+    </div>
+
+
+
+  <!-- Contenu principal -->
+  <section id="home">
+    <h1>Bienvenue dans l'application Multiservices</h1>
+    <p>Explorez nos services et fonctionnalités !</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <ul id="service-options">
+      <li><label><input type="checkbox" value="3000"> Développement web (3000 FCFA)</label></li>
+      <li><label><input type="checkbox" value="4000"> Design (4000 FCFA)</label></li>
+      <li><label><input type="checkbox" value="250000"> Intégration (250000 FCFA)</label></li>
+      <li><label><input type="checkbox" value="220000"> Formation (220000 FCFA)</label></li>
+    </ul>
+    <p>Total : <span id="total">0</span> FCFA</p>
+  </section>
+
+  <section id="editor">
+    <h2>Editeur intégré</h2>
+    <textarea id="editorBox" rows="10" cols="50">Edite moi...</textarea>
+  </section>
+
+  <section id="search">
+    <h2>Recherche instantanée</h2>
+    <input type="text" id="searchInput" placeholder="Rechercher un article..." />
+    <ul id="searchResults">
+      <!-- Les résultats de la recherche seront insérés ici -->
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2024 Application Multiservices</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
