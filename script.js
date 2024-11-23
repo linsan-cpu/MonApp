@@ -67,11 +67,11 @@ editorBox.addEventListener('input', () => {
 
 // Recherche instantanée
 const articles = [
-  '27 sites avec des tâches à aiguiser compétences en programmation',
-  'Nous nous préparons pour un entretien sur Google: 8 mois de travail continu',
-  '15 matériaux de développement de jeux',
-  'Les 10 meilleurs cours vidéo pour apprendre Linux',
-  'Programme de maîtrise JavaScript moderne'
+  '27 сайтов с заданиями на отточку навыков программирования',
+  'Готовимся к собеседованию в Google: 8 месяцев непрерывной работы',
+  '15 материалов по разработке игр',
+  '10 лучших видеокурсов по изучению Linux',
+  'Программа освоения современного JavaScript'
 ];
 
 const searchInput = document.getElementById('searchInput');
