@@ -147,3 +147,29 @@ footer {
   box-shadow: 0 4px 8px rgba(188, 18, 18, 0.2); /* Ajoute une ombre */
   object-fit: cover; /* Assure que l'image garde une bonne apparence dans un cercle */
 }
+
+
+.home-image {
+  display: flex;
+  flex-direction: column; /* Empile l'image et la légende verticalement */
+  align-items: center; /* Centre horizontalement */
+  justify-content: center; /* Centre verticalement si nécessaire */
+  margin-top: 20px; /* Espace entre l'image et le texte */
+}
+
+.home-image img {
+  max-width: 100%;
+  height: auto;
+  width: 200px; /* Taille fixe pour garantir la rondeur */
+  border-radius: 8px; /* Rend l'image ronde */
+  box-shadow: 0 4px 8px rgba(188, 18, 18, 0.2); /* Ajoute une ombre */
+  object-fit: cover; /* Assure que l'image garde une bonne apparence */
+}
+
+.home-image .caption {
+  margin-top: 10px; /* Espace entre l'image et la légende */
+  font-size: 1rem;
+  color: #333;
+  font-style: italic; /* Apparence en italique pour la légende */
+  text-align: center; /* Centre le texte */
+}
