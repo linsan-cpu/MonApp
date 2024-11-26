@@ -1,5 +1,6 @@
 // script.js
 
+
 // Gestion du total pour les services sélectionnés
 const serviceOptions = document.querySelectorAll('#service-options input');
 const totalElement = document.getElementById('total');
@@ -13,6 +14,51 @@ serviceOptions.forEach(option => {
     totalElement.textContent = total;
   });
 });
+
+
+
+// Récupérer les éléments interactifs
+const interactiveElements = document.querySelectorAll('.nav-link, #service-options li, .modal');
+
+// Ajouter un gestionnaire d'événements
+interactiveElements.forEach(element => {
+    element.addEventListener('click', (event) => {
+        // Appliquer event.preventDefault() uniquement pour les liens de navigation
+        if (element.classList.contains('nav-link')) {
+            event.preventDefault(); // Empêche l'action par défaut des liens
+        }
+
+        // Retirer la classe 'clicked' de tous les éléments
+        interactiveElements.forEach(el => el.classList.remove('clicked'));
+
+        // Ajouter la classe 'clicked' à l'élément cliqué
+        element.classList.add('clicked');
+    });
+});
+
+// Gestion séparée pour les cases à cocher
+const serviceCheckboxes = document.querySelectorAll('#service-options input[type="checkbox"]');
+const totalDisplay = document.getElementById('total');
+
+serviceCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+        let total = 0;
+
+        // Parcourir toutes les cases à cocher pour calculer le total
+        serviceCheckboxes.forEach(cb => {
+            if (cb.checked) {
+                total += parseInt(cb.value, 10); // Ajouter la valeur de l'élément coché
+            }
+        });
+
+        // Mettre à jour le total
+        totalDisplay.textContent = total;
+    });
+});
+
+
+
+
 
 
 
@@ -67,12 +113,16 @@ editorBox.addEventListener('input', () => {
 
 // Recherche instantanée
 const articles = [
+
   '27 сайтов с заданиями на отточку навыков программирования',
   'Готовимся к собеседованию в Google: 8 месяцев непрерывной работы',
   '15 материалов по разработке игр',
   '10 лучших видеокурсов по изучению Linux',
   'Программа освоения современного JavaScript'
+
 ];
+
+
 
 const searchInput = document.getElementById('searchInput');
 const searchResults = document.getElementById('searchResults');
@@ -89,3 +139,6 @@ searchInput.addEventListener('input', () => {
     searchResults.appendChild(li);
   });
 });
+
+
+
