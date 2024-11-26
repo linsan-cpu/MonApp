@@ -10,7 +10,7 @@ nav ul {
   display: flex;
   list-style: none;
   padding: 10px;
-  background-color: #333;
+  background-color: #333333;
   margin: 0;
 }
 
@@ -84,7 +84,10 @@ textarea {
 
 
 
-h1, h2 {
+h1 {
+  color: red;
+}
+ h2 {
   color: #333;
 }
 
@@ -101,4 +104,46 @@ footer {
   padding: 10px;
   background-color: #333;
   color: white;
+}
+
+
+
+.clicked {
+  background-color: green;
+  color: white;
+  border-radius: 5px; /* Optionnel */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animation douce */
+}
+
+
+
+#home {
+  display: flex;
+  flex-direction: column; /* Empile les éléments verticalement */
+  align-items: flex-start; /* Centre les éléments horizontalement */
+  text-align: left; /* Centre le texte */
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+
+.home-image {
+  display: flex;
+  justify-content: center; /* Centre l'image horizontalement */
+  margin-top: 20px; /* Espace entre le texte et l'image */
+}
+
+
+
+.home-text {
+  margin-bottom: 20px; /* Ajoute un espace entre le texte et l'image */
+}
+
+.home-image img {
+  max-width: 100%;
+  height: auto;
+  width: 200px; /* Taille fixe pour garantir la rondeur */
+  border-radius: 8px; /* Rend l'image ronde */
+  box-shadow: 0 4px 8px rgba(188, 18, 18, 0.2); /* Ajoute une ombre */
+  object-fit: cover; /* Assure que l'image garde une bonne apparence dans un cercle */
 }
