@@ -101,6 +101,22 @@ window.addEventListener('click', (event) => {
 
 
 
+// Récupérer les boutons et le conteneur
+const gridViewButton = document.getElementById('grid-view');
+const listViewButton = document.getElementById('list-view');
+const contentContainer = document.getElementById('content-container');
+
+// Appliquer la vue en grille
+gridViewButton.addEventListener('click', () => {
+  contentContainer.classList.remove('list-view');
+  contentContainer.classList.add('grid-view');
+});
+
+// Appliquer la vue en liste
+listViewButton.addEventListener('click', () => {
+  contentContainer.classList.remove('grid-view');
+  contentContainer.classList.add('list-view');
+});
 
 
 
