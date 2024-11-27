@@ -178,15 +178,45 @@ footer {
 #content-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 0px; /* Espacement entre les éléments */
-  justify-content: left; /* Aligne à gauche */
+  gap: 10px; /* Espacement entre les éléments */
+  justify-content: center; /* Centrer le contenu dans le conteneur */
+}
+
+/* Vue Grille */
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes égales */
+  grid-gap: 10px; /* Espacement uniforme entre les éléments */
+  width: 100%; /* S'assurer que la grille occupe tout l'espace disponible */
+}
+
+.grid-view .item {
+  text-align: center; /* Centrer le contenu des éléments */
 }
 
 .grid-view .item img {
-  width: 100%;
-  height: 200px; /* Hauteur fixe */
-  object-fit: cover; /* L'image couvre l'espace sans déformation */
+  width: 100%; /* L'image occupe toute la largeur de son conteneur */
+  max-width: 100%; /* Limiter la largeur des images */
+  height: auto; /* Hauteur automatique pour conserver les proportions */
+  object-fit: cover; /* Couvre le conteneur sans déformation */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre sous l'image */
+  transition: transform 0.3s ease; /* Animation de zoom au survol */
 }
+
+.grid-view .item img:hover {
+  transform: scale(1.05); /* Zoom léger au survol */
+}
+
+/* Media Queries pour ajuster l'espacement selon la taille de l'écran */
+
+/* Sur les petits écrans (moins de 768px), la disposition reste en 2 colonnes */
+@media (max-width: 767px) {
+  .grid-view {
+    grid-template-columns: repeat(2, 1fr); /* Toujours 2 colonnes */
+  }
+}
+
 
 
 /* Vue Grille */
@@ -203,7 +233,7 @@ footer {
 
 .grid-view .item img {
   width: 100%; /* L'image occupe toute la largeur de son conteneur */
-  max-width: 100px; /* Largeur maximale de l'image */
+  max-width: 500px; /* Largeur maximale de l'image */
   height: auto; /* Maintien des proportions */
   border-radius: 8px; /* Coins arrondis */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
@@ -224,7 +254,7 @@ footer {
 }
 
 .list-view .item img {
-  width: 20%; /* L'image occupe toute la largeur de son conteneur */
+  width: 50%; /* L'image occupe toute la largeur de son conteneur */
   max-width: 100%; /* Largeur maximale de l'image */
   height: auto; /* Maintien des proportions */
   border-radius: 8px; /* Coins arrondis */
