@@ -203,7 +203,7 @@ footer {
 
 .grid-view .item img {
   width: 100%; /* L'image occupe toute la largeur de son conteneur */
-  max-width: 500px; /* Largeur maximale de l'image */
+  max-width: 100px; /* Largeur maximale de l'image */
   height: auto; /* Maintien des proportions */
   border-radius: 8px; /* Coins arrondis */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
