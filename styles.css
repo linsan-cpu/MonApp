@@ -173,3 +173,62 @@ footer {
   font-style: italic; /* Apparence en italique pour la légende */
   text-align: center; /* Centre le texte */
 }
+
+/* Container principal */
+#content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px; /* Espacement entre les éléments */
+  justify-content: left; /* Aligne à gauche */
+}
+
+.grid-view .item img {
+  width: 100%;
+  height: 200px; /* Hauteur fixe */
+  object-fit: cover; /* L'image couvre l'espace sans déformation */
+}
+
+
+/* Vue Grille */
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+  grid-gap: 0px; /* Espacement uniforme entre les éléments */
+  width: 100%; /* Occupe toute la largeur du conteneur */
+}
+
+.grid-view .item {
+  text-align: center; /* Centre le contenu des éléments */
+}
+
+.grid-view .item img {
+  width: 100%; /* L'image occupe toute la largeur de son conteneur */
+  max-width: 500px; /* Largeur maximale de l'image */
+  height: auto; /* Maintien des proportions */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
+ /*transition: transform 0.3s ease; /* Animation au survol */
+}
+
+
+
+/* Vue Liste */
+.list-view {
+  display: flex;
+  flex-direction: column; /* Affichage en colonne pour la vue liste */
+  gap: 10px; /* Espacement entre les éléments */
+}
+
+.list-view .item {
+  width: 100%; /* L'élément prend toute la largeur */
+}
+
+.list-view .item img {
+  width: 20%; /* L'image occupe toute la largeur de son conteneur */
+  max-width: 100%; /* Largeur maximale de l'image */
+  height: auto; /* Maintien des proportions */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
+}
+
+
